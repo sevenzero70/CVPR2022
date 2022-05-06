@@ -7,7 +7,7 @@
 
 #  🌑 Low-light
 
-## 1 Toward Fast, Flexible, and Robust Low-Light Image Enhancement
+## 1.Toward Fast, Flexible, and Robust Low-Light Image Enhancement
 [Paper](http://arxiv.org/pdf/2204.10137) /
 [Code](https://github.com/vis-opt-group/SCI) <br>
 > L. Ma, T. Ma, R. Liu, X. Fan, and Z. Luo, “Toward Fast, Flexible, and Robust Low-Light Image Enhancement,” arXiv:2204.10137 [cs], Apr. 2022, Accessed: May 06, 2022. [Online]. Available: http://arxiv.org/abs/2204.10137
@@ -21,7 +21,7 @@ Existing low-light image enhancement techniques are mostly not only difficult to
 
 # 🌫 Dehazing/Denoising
 
-## 1. Image dehazing transformer with transmission-aware 3D position embedding
+## 1.Image dehazing transformer with transmission-aware 3D position embedding
 [Paper](https://li-chongyi.github.io/Proj_DeHamer.html)
 > “Image Dehazing Transformer with Transmission-Aware 3D Position Embedding.” https://li-chongyi.github.io/Proj_DeHamer.html (accessed May 06, 2022).
 
@@ -29,7 +29,7 @@ Despite single image dehazing has been made promising progress with Convolutiona
 
 ![image](https://user-images.githubusercontent.com/70806159/167100852-a42ff08f-dc51-4a1e-9f1f-f621e4af67dc.png)
 
-## 2. **Blind2Unblind: Self-Supervised Image Denoising with Visible Blind Spots**
+## 2.Blind2Unblind: Self-Supervised Image Denoising with Visible Blind Spots
 
 [Paper](https://arxiv.org/abs/2203.06967)/
 [Code](https://github.com/demonsjin/Blind2Unblind)
@@ -38,7 +38,7 @@ Real noisy-clean pairs on a large scale are costly and difficult to obtain. Mean
 
 ![image](https://user-images.githubusercontent.com/70806159/167102522-fc241c65-333e-45e2-b25a-f873829ca2cb.png)
 
-## 3. **CVF-SID: Cyclic multi-Variate Function for Self-Supervised Image Denoising by Disentangling Noise from Image**
+## 3.CVF-SID: Cyclic multi-Variate Function for Self-Supervised Image Denoising by Disentangling Noise from Image
 
 [Paper](https://arxiv.org/pdf/2203.13009.pdf)/
 [Code](https://github.com/Reyhanehne/CVF-SID_PyTorch)
@@ -58,14 +58,14 @@ consider the signal-independent noise models, we also deal
 with signal-dependent noise components for real-world applications. Furthermore, we do not rely on any prior assumptions about the underlying noise distribution, making
 CVF-SID more generalizable toward realistic noise. Extensive experiments on real-world datasets show that CVFSID achieves state-of-the-art self-supervised image denoising performance and is comparable to other existing approaches. The code is publicly available from this link.
 
-## 4. AP-BSN: Self-Supervised Denoising for Real-World Images via Asymmetric PD and Blind-Spot Network
+## 4.AP-BSN: Self-Supervised Denoising for Real-World Images via Asymmetric PD and Blind-Spot Network
 
 [Paper](https://arxiv.org/pdf/2203.11799.pdf)/
 [Code](https://github.com/wooseoklee4/AP-BSN)
 
 Blind-spot network (BSN) and its variants have made significant advances in self-supervised denoising. Nevertheless, they are still bound to synthetic noisy inputs due to less practical assumptions like pixel-wise independent noise. Hence, it is challenging to deal with spatially correlated real-world noise using self-supervised BSN. Recently, pixel-shuffle downsampling (PD) has been proposed to remove the spatial correlation of real-world noise. However, it is not trivial to integrate PD and BSN directly, which prevents the fully self-supervised denoising model on realworld images. We propose an Asymmetric PD (AP) to address this issue, which introduces different PD stride factors for training and inference. We systematically demonstrate that the proposed AP can resolve inherent trade-offs caused by specific PD stride factors and make BSN applicable to practical scenarios. To this end, we develop AP-BSN, a state-of-the-art self-supervised denoising method for realworld sRGB images. We further propose random-replacing refinement, which significantly improves the performance of our AP-BSN without any additional parameters. Extensive studies demonstrate that our method outperforms the other self-supervised and even unpaired denoising methods by a large margin, without using any additional knowledge, e.g., noise level, regarding the underlying unknown noise.
 
-## 5. Dancing under the stars: video denoising in starlight
+## 5.Dancing under the stars: video denoising in starlight
 
 [Paper](https://arxiv.org/pdf/2204.04210.pdf)
 
@@ -86,7 +86,7 @@ we achieve improved video quality at the lowest light levels,
 demonstrating photorealistic video denoising in starlight for
 the first time.
 
-## 6. IDR:Self-Supervised Image Denoising via Iterative Data Refinement
+## 6.IDR:Self-Supervised Image Denoising via Iterative Data Refinement
 
 [Paper](https://arxiv.org/pdf/2111.14358.pdf)/
 [code](https://github.com/zhangyi-3/IDR)
