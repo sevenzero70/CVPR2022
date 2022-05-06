@@ -16,6 +16,29 @@ Existing low-light image enhancement techniques are mostly not only difficult to
 
 ![image](https://user-images.githubusercontent.com/70806159/167101488-fadd8ff3-e502-4027-8e1b-d185b9ca3b26.png)
 
+## Deep Color Consistent Network for Low-Light Image Enhancement
+
+Low-light image enhancement (LLIE) explores how to
+refine the illumination and obtain natural normal-light images. Current LLIE methods mainly focus on improving the
+illumination, but do not consider the color consistency by
+reasonably incorporating color information into the LLIE
+process. As a result, color difference usually exists between
+the enhanced image and ground-truth. To address this issue, we propose a new deep color consistent network termed
+DCC-Net to retain the color consistency for LLIE. A new
+“divide and conquer” collaborative strategy is presented,
+which can jointly preserve color information and enhance
+the illumination. Specifically, the decoupling strategy of our
+DCC-Net decouples each color image into two main components, i.e., gray image plus color histogram. Gray image
+is used to generate reasonable structures and textures, and
+the color histogram is beneficial for preserving the color
+consistency. That is, they both are utilized to complete the
+LLIE task collaboratively. To match the color and content
+features, and reduce the color consistency gap between enhanced image and ground-truth, we also design a new pyramid color embedding (PCE) module, which can better embed color information into the LLIE process. Extensive experiments on six real datasets show that the enhanced images of our DCC-Net are more natural and colorful, and
+perform favorably against the state-of-the-art methods.
+
+<img width="816" alt="image" src="https://user-images.githubusercontent.com/70806159/167126874-276c7817-368f-4df4-a4e5-54118ac6c452.png">
+
+
 ------
 <p id="Dehazing/Denoising"></p>
 
