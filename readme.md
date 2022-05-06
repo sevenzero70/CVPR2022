@@ -1,4 +1,11 @@
-# 🍎 low-light
+# Menu
+[Low-light](# Low-light)
+[Dehazing/Denoising](# Dehazing/Denoising)
+[Domain-adaptation](# Domain-adaptation)
+
+<p id="Low-light"></p>
+
+# 🍎 Low-light
 
 ## 1 Toward Fast, Flexible, and Robust Low-Light Image Enhancement
 [Paper](http://arxiv.org/pdf/2204.10137) /
@@ -10,10 +17,12 @@ Existing low-light image enhancement techniques are mostly not only difficult to
 ![image](https://user-images.githubusercontent.com/70806159/167101488-fadd8ff3-e502-4027-8e1b-d185b9ca3b26.png)
 
 ------
+<p id="Dehazing/Denoising"></p>
+
 # Dehazing/Denoising
 
 ## 1. Image dehazing transformer with transmission-aware 3D position embedding
-[paper](https://li-chongyi.github.io/Proj_DeHamer.html)
+[Paper](https://li-chongyi.github.io/Proj_DeHamer.html)
 > “Image Dehazing Transformer with Transmission-Aware 3D Position Embedding.” https://li-chongyi.github.io/Proj_DeHamer.html (accessed May 06, 2022).
 
 Despite single image dehazing has been made promising progress with Convolutional Neural Networks (CNNs), the inherent equivariance and locality of convolution still bottleneck dehazing performance. Though Transformer has occupied various computer vision tasks, directly leveraging Transformer for image dehazing is challenging: 1) it tends to result in ambiguous and coarse details that are undesired for image reconstruction; 2) previous position embedding of Transformer is provided in logic or spatial position order that neglects the variational haze densities, which results in the sub-optimal dehazing performance. **The key insight of this study is to investigate how to combine CNN and Transformer for image dehazing.** To solve the feature inconsistency issue between Transformer and CNN, we propose to modulate CNN features via learning modulation matrices (i.e., coefficient matrix and bias matrix) conditioned on Transformer features instead of simple feature addition or concatenation. The feature modulation naturally inherits the global context modeling capability of Transformer and the local representation capability of CNN. We bring a haze density-related prior into Transformer via a novel transmission-aware 3D position embedding module, which not only provides the relative position but also suggests the haze density of different spatial regions. Extensive experiments demonstrate that our method attains state-of-the-art performance on several image dehazing benchmarks.
@@ -31,7 +40,8 @@ Real noisy-clean pairs on a large scale are costly and difficult to obtain. Mean
 
 ## 3. **CVF-SID: Cyclic multi-Variate Function for Self-Supervised Image Denoising by Disentangling Noise from Image**
 
-[paper](https://arxiv.org/pdf/2203.13009.pdf)
+[Paper](https://arxiv.org/pdf/2203.13009.pdf)/
+[Code](https://github.com/Reyhanehne/CVF-SID_PyTorch)
 
 Recently, significant progress has been made on image
 denoising with strong supervision from large-scale datasets.
@@ -47,3 +57,57 @@ and noise maps from the input by leveraging various selfsupervised loss terms. U
 consider the signal-independent noise models, we also deal
 with signal-dependent noise components for real-world applications. Furthermore, we do not rely on any prior assumptions about the underlying noise distribution, making
 CVF-SID more generalizable toward realistic noise. Extensive experiments on real-world datasets show that CVFSID achieves state-of-the-art self-supervised image denoising performance and is comparable to other existing approaches. The code is publicly available from this link.
+
+## 4. AP-BSN: Self-Supervised Denoising for Real-World Images via Asymmetric PD and Blind-Spot Network
+
+[Paper](https://arxiv.org/pdf/2203.11799.pdf)/
+[Code](https://github.com/wooseoklee4/AP-BSN)
+
+Blind-spot network (BSN) and its variants have made significant advances in self-supervised denoising. Nevertheless, they are still bound to synthetic noisy inputs due to less practical assumptions like pixel-wise independent noise. Hence, it is challenging to deal with spatially correlated real-world noise using self-supervised BSN. Recently, pixel-shuffle downsampling (PD) has been proposed to remove the spatial correlation of real-world noise. However, it is not trivial to integrate PD and BSN directly, which prevents the fully self-supervised denoising model on realworld images. We propose an Asymmetric PD (AP) to address this issue, which introduces different PD stride factors for training and inference. We systematically demonstrate that the proposed AP can resolve inherent trade-offs caused by specific PD stride factors and make BSN applicable to practical scenarios. To this end, we develop AP-BSN, a state-of-the-art self-supervised denoising method for realworld sRGB images. We further propose random-replacing refinement, which significantly improves the performance of our AP-BSN without any additional parameters. Extensive studies demonstrate that our method outperforms the other self-supervised and even unpaired denoising methods by a large margin, without using any additional knowledge, e.g., noise level, regarding the underlying unknown noise.
+
+## 5. Dancing under the stars: video denoising in starlight
+
+[Paper](https://arxiv.org/pdf/2204.04210.pdf)
+
+Imaging in low light is extremely challenging due to
+low photon counts. Using sensitive CMOS cameras, it is
+currently possible to take videos at night under moonlight
+(0.05-0.3 lux illumination). In this paper, we demonstrate
+photorealistic video under starlight (no moon present,
+<0.001 lux) for the first time. To enable this, we develop a
+GAN-tuned physics-based noise model to more accurately
+represent camera noise at the lowest light levels. Using
+this noise model, we train a video denoiser using a
+combination of simulated noisy video clips and real noisy
+still images. We capture a 5-10 fps video dataset with
+significant motion at approximately 0.6-0.7 millilux with no
+active illumination. Comparing against alternative methods,
+we achieve improved video quality at the lowest light levels,
+demonstrating photorealistic video denoising in starlight for
+the first time.
+
+## 6. IDR:Self-Supervised Image Denoising via Iterative Data Refinement
+
+[Paper](https://arxiv.org/pdf/2111.14358.pdf)/
+[code](https://github.com/zhangyi-3/IDR)
+
+The lack of large-scale noisy-clean image pairs restricts
+supervised denoising methods’ deployment in actual applications. While existing unsupervised methods are able
+to learn image denoising without ground-truth clean images, they either show poor performance or work under
+impractical settings (e.g., paired noisy images). In this paper, we present a practical unsupervised image denoising
+method to achieve state-of-the-art denoising performance.
+Our method only requires single noisy images and a noise
+model, which is easily accessible in practical raw image denoising. It performs two steps iteratively: (1) Constructing
+a noisier-noisy dataset with random noise from the noise
+model; (2) training a model on the noisier-noisy dataset
+and using the trained model to refine noisy images to obtain the targets used in the next round. We further approximate our full iterative method with a fast algorithm for
+more efficient training while keeping its original high performance. Experiments on real-world, synthetic, and correlated noise show that our proposed unsupervised denoising approach has superior performances over existing unsupervised methods and competitive performance with supervised methods. In addition, we argue that existing denoising datasets are of low quality and contain only a small
+number of scenes. To evaluate raw image denoising performance in real-world applications, we build a high-quality
+raw image dataset SenseNoise-500 that contains 500 reallife scenes. The dataset can serve as a strong benchmark for
+better evaluating raw image denoising. Code and dataset
+will be released
+
+-----
+<p id="Domain-adaptation"></p>
+
+# Domain-adaptation
