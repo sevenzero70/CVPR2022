@@ -38,7 +38,7 @@ is used to generate reasonable structures and textures, and
 the color histogram is beneficial for preserving the color
 consistency. That is, they both are utilized to complete the
 LLIE task collaboratively. To match the color and content
-features, and reduce the color consistency gap between enhanced image and ground-truth, we also design a new pyramid color embedding (PCE) module, which can better embed color information into the LLIE process. Extensive experiments on six real datasets show that the enhanced images of our DCC-Net are more natural and colorful, and
+features, and reduce the color consistency gap between enhanced image and ground-truth, we also design a new pyramid color embedding (PCE) module, which can better embed color information into the LLIE process. Extensive experiments on six real datasets show that the enhanced images of our DCC-Net are more natural and colorful, and
 perform favorably against the state-of-the-art methods.
 
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/70806159/167126874-276c7817-368f-4df4-a4e5-54118ac6c452.png">
